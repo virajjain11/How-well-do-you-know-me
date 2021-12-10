@@ -1,46 +1,44 @@
 var readlineSync = require('readline-sync');
 var score = 0;
-if(readlineSync.keyInYN("Eyii Bolimagaa, Nik yan yerr gotunda? say yes or no")){
+if(readlineSync.keyInYN("Heyy buddy..Do you know me?")){
 userQuestion();
-console.log("Ok byee....elle tikkla nik unduu");
+console.log("Ok byee");
 }
 else{
-  console.log("Gotujji athaa.....");
-  console.log("Gotujji atha BVC.....");
-  console.log("ippadh...malleji");
-  console.log("Nanora bala....Kalpave nik");
+  console.log("Then, Why are you still alive?.....");
+ 
 }
 
 function userQuestion(){
-var userAns =  readlineSync.question("Enna birthday Date panya naii: ");
+var userAns =  readlineSync.question("what's my birthday Date: ");
 if(userAns=="27"){
   correctAns();
 }
 else{
  wrongAns();
 }
-var userAns =  readlineSync.question("Enna birthday month panya Bosudii: ");
+var userAns =  readlineSync.question("What's my birthday month: ");
 if(userAns==="09"|| userAns === "9" || userAns=== "september"){
   correctAns();
 }
 else{
-   console.log("Avla gotujja nik....boka dada gotundu nik sante");
+   console.log("Are you really my friend..?");
  wrongAns();
 }
-var userAns =  readlineSync.question("Ninna pudar pan: ");
-console.log( userAns + " malla bvc ge....hehe...Thank you for wasting your time")
+var userAns =  readlineSync.question("what's your name: ");
+console.log(" Dear " + userAns + " Thank you for wasting your time....will meet you next time....soooon")
 }
 
 function currentScore(val){
   score = score+val;
-    console.log("Ninna score "+ score);
-  console.log("-------------------")
+    console.log("Your score is "+ score);
+  console.log("-------------------");
 }
 function correctAns(){
-  console.log("Sabaash bete!..Nik onji point");
+  console.log("Yayyy!....That's a right answer");
   currentScore(1);
 }
 function wrongAns(){
-   console.log("Saila eee");
+   console.log("Uhohh!...better luck next time");
   currentScore(-1);
 }
